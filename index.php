@@ -69,13 +69,16 @@ $result = $statement->fetchAll(PDO::FETCH_OBJ);
     <link rel="shortcut icon" herf="img/favicon.ico" type="image/x-icon"> 
   </head>
   <body>
-    <h1>bij 4.1.3 gebleven </h1>
     <div class="container mt-3">
 
         <div class="row justify-content center">
             <div class="col-8">
                 <h3>Hoogste achtbanen van Europa</h3>
             </div>
+        </div>
+
+        <div class="row justify-content-center my-3">
+            <div class="col-10"><h6>nieuwe achtbaan <a href="./create.php"><i class="bi bi-plus-square text-danger"></i></a></h6></div>
         </div>
 
         <div class="row justify-content center">
