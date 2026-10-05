@@ -51,8 +51,8 @@ $statement->execute();
 
 $result = $statement->fetchAll(PDO::FETCH_OBJ);
 
-//Toon de geslecteerde data uit de database
-var_dump($result);
+// Toon de geslecteerde data uit de database
+// var_dump($result);
 
 ?>
 
@@ -68,7 +68,7 @@ var_dump($result);
     <link rel="shortcut icon" herf="img/favicon.ico" type="image/x-icon"> 
   </head>
   <body>
-    <h1>laasts gebleven op 3.1.9</h1>
+    <h1>bij 4.1 gebleven eerst 3 github sturen</h1>
     <div class="container mt-3">
 
         <div class="row justify-content center">
@@ -78,7 +78,7 @@ var_dump($result);
         </div>
 
         <div class="row justify-content center">
-            <div class="col-8">
+            <div class="col-10">
                 <!-- Hier komt  de tabel -->
                  <table>
                     <thead>
@@ -90,14 +90,16 @@ var_dump($result);
                         <th>Bouwjaar</th>
                     </thead>
                     <tbody>
+                        <?php foreach($result as $rollercoaster):?>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><?= $rollercoaster->Rollercoaster; ?></td>
+                            <td><?= $rollercoaster->AmusementPark; ?></td>
+                            <td><?= $rollercoaster->Country; ?></td>
+                            <td class="text-center"><?= $rollercoaster->Topspeed; ?></td>
+                            <td class="text-center"><?= $rollercoaster->Height; ?></td>
+                            <td><?= $rollercoaster->YOFC; ?></td>
                         </tr>
+                    <?php endforeach; ?>
                     </tbody>
                  </table>
             </div>
