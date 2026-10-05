@@ -22,7 +22,7 @@ $pdo = new PDO($dsn, $dbUser, $dbPass);
  * maak een select-quary die alle gegevens uit de tabel
  * HoogsteAchtbaanVanEuropa haalt. Sorteerd op Hoogte aflopend
  */
-$sql= "SELECT HAVE.Id
+$sql= "SELECT HAVE.id
              ,HAVE.Rollercoaster
              ,HAVE.AmusementPark
              ,HAVE.Country
@@ -64,11 +64,12 @@ $result = $statement->fetchAll(PDO::FETCH_OBJ);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CRUD-Basics</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" herf="img/favicon.ico" type="image/x-icon"> 
   </head>
   <body>
-    <h1>bij 4.1 gebleven </h1>
+    <h1>bij 4.1.3 gebleven </h1>
     <div class="container mt-3">
 
         <div class="row justify-content center">
@@ -88,6 +89,7 @@ $result = $statement->fetchAll(PDO::FETCH_OBJ);
                         <th>Topsnelheid (KM/u)</th>
                         <th>Hoogte (m)</th>
                         <th>Bouwjaar</th>
+                        <th>Verwijder</th>
                     </thead>
                     <tbody>
                         <?php foreach($result as $rollercoaster):?>
@@ -98,6 +100,11 @@ $result = $statement->fetchAll(PDO::FETCH_OBJ);
                             <td class="text-center"><?= $rollercoaster->Topspeed; ?></td>
                             <td class="text-center"><?= $rollercoaster->Height; ?></td>
                             <td><?= $rollercoaster->YOFC; ?></td>
+                            <td class="text-center">
+                                <a href="delete.php?id=<?= $rollercoaster->id; ?>">
+                                    <i class="bi bi-x-square text-danger"></i>
+                                </a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>
