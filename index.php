@@ -68,7 +68,7 @@ $result = $statement->fetchAll(PDO::FETCH_OBJ);
     <link rel="shortcut icon" herf="img/favicon.ico" type="image/x-icon"> 
   </head>
   <body>
-    <h1>bij 4.1 gebleven eerst 3 github sturen</h1>
+    <h1>bij 4.1 gebleven </h1>
     <div class="container mt-3">
 
         <div class="row justify-content center">
