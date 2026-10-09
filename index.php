@@ -4,19 +4,7 @@
  */
 include('config/config.php');
 
-/**
- * We gaan data-sourcenamestring maken waarin alle benodigde gegevens 
- * staan die nodig zijn om een verbinding te maken met de database
- */
-$dsn = "mysql:host=$dbHost;
-        dbname=$dbName;
-        charset=UTF8";
 
-/**
- * Maak een nieuwe PDO-Object zodat we een verbinding kunnen maken
- * met de mysql-server en de database
- */
-$pdo = new PDO($dsn, $dbUser, $dbPass);
 
 /**
  * maak een select-quary die alle gegevens uit de tabel

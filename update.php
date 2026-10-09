@@ -1,11 +1,6 @@
 <?php
 include('config/config.php');
 
-$dsn = "mysql:host=$dbHost;
-        dbname=$dbName;
-        charset=UTF8";
-
-$pdo = new PDO($dsn, $dbUser, $dbPass);
 
 if (isset($_POST['submit'])) {
     $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
