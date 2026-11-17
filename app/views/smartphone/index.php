@@ -3,7 +3,7 @@
 
 <!-- voor het centreren van de container gebruiken we het boodstrap grid -->
 <div class="container">
-    <div class="row mt-3 d-flex justify-container-center">
+    <div class="row mt-4 d-flex justify-container-center">
         <div class="col-10">
             <h3><?php echo $data['title']; ?></h3>
         </div>
@@ -74,7 +74,9 @@
                     </tbody>
                 </table>
 
-                <a href="<?= URLROOT; ?>/homepages/index"><i class="bi bi-arrow-left"></i></a>
+                <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Terug naar homepagina
+                </a>
             </div>
         </div>
 

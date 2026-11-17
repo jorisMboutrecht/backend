@@ -10,8 +10,8 @@
     </div>
 
     <div class="row mt-3 d-<?= $data['display']; ?> justify-container-center">
-        <div class="col-6 text-begin text-primary">
-            <div class="alert alert-succes" role="alert">
+        <div class="col-6">
+            <div class="alert alert-<?= $data['color'] ?? 'success'; ?>" role="alert">
                 <?= $data['message']; ?>
             </div>
         </div>
@@ -53,10 +53,13 @@
                      <input name="megapixels" type="number" min="0" max="10000" class="form-control" id="megapixels" value="<?= $_POST['megapixels'] ?? $data['smartphone']->MegaPixels; ?>" required>
                 </div>
                 <input type="hidden" name="id" value="<?= $_POST['id'] ?? $data['smartphone']->Id ?>">
-                <button type="submit" class="btn btn-primary">Verstuur</button>
+                <div class="d-flex justify-centent-between mt-3 mb-5">
+                    <button type="submit" class="btn btn-primary">Verstuur</button>
+                    <a href="<?=  URLROOT; ?>/homepages/index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Terug naar de homepage
+                    </a>
+                </div>
             </form>
-
-            <a href="<?= URLROOT; ?>/homepages/index"><i class="bi bi-arrow-left"></i></a>
         </div>
     </div>
 </div>

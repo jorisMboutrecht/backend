@@ -11,7 +11,8 @@ class Homepages extends BaseController
 
 
         $data = [
-            'title' => 'Homepagina'
+            'title' => 'Homepagina',
+            'laatsGebleven' => '8.1.6'
         ];
 
         /**
